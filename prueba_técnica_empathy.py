@@ -323,10 +323,8 @@ centroides = kmeans.cluster_centers_
 
 scaler_clustering = StandardScaler()
 
-# Fit the new scaler only with the columns used for clustering
 scaler_clustering.fit(df[['SignosVitales_IMC', 'EDAD', 'Dias Perdidos']])
 
-# Apply inverse_transform using the new scaler
 centroides_original = scaler_clustering.inverse_transform(centroides)
 
 #Visualizar los grupos mediante un gráfico de dispersión
