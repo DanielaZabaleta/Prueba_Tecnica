@@ -188,25 +188,6 @@ sns.heatmap(df_numeric.corr(), annot=True, cmap='coolwarm', fmt=".2f")
 plt.title('Matriz de Correlación')
 plt.show()
 
-# prompt: Matriz de correlacion para variables numericas
-
-import matplotlib.pyplot as plt
-import numpy as np
-# Selecciona solo las variables numéricas para la matriz de correlación
-numeric_cols = df.select_dtypes(include=np.number).columns
-
-# Calcula la matriz de correlación
-correlation_matrix = df[numeric_cols].corr()
-
-# Muestra la matriz de correlación
-print(correlation_matrix)
-
-# Visualiza la matriz de correlación con un mapa de calor
-plt.figure(figsize=(12, 10))
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
-plt.title('Matriz de Correlación')
-plt.show()
-
 #Correlaciónes lineales
 #Convertimos a número todas las variables
 
